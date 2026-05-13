@@ -1,31 +1,18 @@
-.mainPage{
-  margin-left: 10vw;
-  margin-right: 10vw;
-  height: 90vh;
-  padding: 10px;
-  background-color: lightgray;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
+/* src/app/globals.css */
+* {
+  box-sizing: border-box;
   padding: 0;
-  overflow: hidden;
-  background-color: #333333;
+  margin: 0;
 }
 
-ul li {
-  float: left;
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #f3f4f6;
+  -webkit-font-smoothing: antialiased;
 }
 
-ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+a {
+  color: inherit;
   text-decoration: none;
-}
-
-ul li a:hover {
-  background-color: #111111;
 }

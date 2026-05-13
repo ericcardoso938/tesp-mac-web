@@ -1,10 +1,189 @@
+.container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
 
+.appWindow {
+  background: #ffffff;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  border: 1px solid #e5e7eb;
+  padding: 40px;
+}
 
-.btnCust{
-  width: 200px;
-  height: 30px;
-  font-size: 16px;
-  background-color: #cccccc;
-  color: #0a0a0a;
+.title {
+  color: #111827;
+  text-align: center;
+  margin: 0 0 8px 0;
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.subtitle {
+  color: #6b7280;
+  text-align: center;
+  margin: 0 0 32px 0;
+  font-size: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.input {
+  flex: 1;
+  padding: 14px 16px;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
   border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: #111827;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.1);
+}
+
+.addButton {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 0 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.addButton:hover {
+  background: #374151;
+  transform: translateY(-1px);
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 24px;
+}
+
+.filterBtn {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  color: #111827;
+  background: #f3f4f6;
+}
+
+.filterBtnActive {
+  background: #f3f4f6;
+  color: #111827;
+  font-weight: 600;
+}
+
+/* --- CORREÇÃO DA LISTA DE TAREFAS --- */
+.taskList {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+  margin: 0 !important;
+  transition: all 0.2s ease;
+  overflow: hidden; /* Corta qualquer coisa que tente sair das bordas arredondadas */
+}
+
+.taskItem:hover {
+  background: #f9fafb !important;
+  border-color: #d1d5db !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.taskContent {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #111827;
+}
+
+.taskText {
+  color: #374151;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.taskTextCompleted {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.deleteBtn {
+  background: transparent;
+  color: #ef4444;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.taskItem:hover .deleteBtn {
+  opacity: 1;
+}
+
+.deleteBtn:hover {
+  background: #fee2e2;
+}
+
+.emptyState {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 20px 0;
 }
